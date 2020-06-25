@@ -45,4 +45,10 @@ class StarSystem
     new_array.map() {|planet| planet.name}
   end
 
+
+  def get_planet_names_sorted_by_size_decreasing()
+    new_array = @planets.sort_by() {|planet| planet.diameter}
+    new_array.reverse.map() {|planet| planet.name}
+  end
+
 end
