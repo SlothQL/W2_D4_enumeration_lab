@@ -36,4 +36,8 @@ class StarSystem
     array_of_planets.count
   end
 
+  def get_total_number_of_moons()
+    @planets.reduce(0) { |total, planet| total + planet.number_of_moons}
+  end
+
 end
