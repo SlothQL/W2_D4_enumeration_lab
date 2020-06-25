@@ -40,4 +40,9 @@ class StarSystem
     @planets.reduce(0) { |total, planet| total + planet.number_of_moons}
   end
 
+  def get_planet_names_sorted_by_increasing_distance_from_sun()
+    new_array = @planets.sort_by() {|planet| planet.distance_from_sun}
+    new_array.map() {|planet| planet.name}
+  end
+
 end
